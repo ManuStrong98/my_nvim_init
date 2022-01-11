@@ -9,7 +9,7 @@ au VimEnter * :RltvNmbr
 
 "colorscheme delek
 
-set encoding=utf-8 
+"set encoding=utf-8 
  
 "  TextEdit might fail if hidden is not set.
 set hidden
@@ -44,10 +44,39 @@ inoremap <M-f> <C-Right>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-s> <Esc>:w<CR>
+inoremap <F4> <Esc>:qa<CR>
 						   " TERMINAL
 "terminal emulator
 tmap <Esc> <C-\><C-n>
 
+						   " NORMAL
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+						   " Normal, Visual, Select, Operator-pending
+map <F4> <Esc>:qa<CR> 
+						   " Insert, Command-line, Lang-Arg
+lnoremap <F4> <Esc>:qa<CR>
+
+
 
 					      " Configuration: COMMAND
 command! Cargar :w | :so %
+command! Q :qa
+
+"###########################################################################################
+
+au  VimEnter * :NvimTreeOpen 
+
+
+
+
+
+
+
+
+
+
+
+
