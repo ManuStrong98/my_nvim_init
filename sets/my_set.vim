@@ -1,11 +1,10 @@
-						" Configuration: SET
+				" Configuration: SET
 "set tab 3 spaces
 set sw=3
 
 "set cursorline cursorcolumn
 "number and relative number simultaneously
 set number 
-au VimEnter * :RltvNmbr
 
 "colorscheme delek
 
@@ -24,8 +23,9 @@ set  nowritebackup
  
 "  Give more space for displaying messages.
 set  cmdheight=2
-						" Configuration: MAP
-						   " INSERT
+"#################################################################################
+				" Configuration: MAP
+				   " INSERT
 "to Shift-Tab
 inoremap <S-TAB> <C-d>
 inoremap <C-space> <C-p>
@@ -45,38 +45,56 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-s> <Esc>:w<CR>
 inoremap <F4> <Esc>:qa<CR>
-						   " TERMINAL
+				   " TERMINAL
 "terminal emulator
 tmap <Esc> <C-\><C-n>
 
-						   " NORMAL
+				   " NORMAL
 nnoremap <C-l> <C-w>l
 nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
 nnoremap <C-h> <C-w>h
-						   " Normal, Visual, Select, Operator-pending
+nnoremap <S-l> :vertical resize +4<CR>
+nnoremap <S-h> :vertical resize -4<CR>
+nnoremap <S-k> :resize +5<CR>
+nnoremap <S-j> :resize -5<CR>
+"nnoremap <leader>j :echo añlsfjk<CR>
+
+				   " Normal, Visual, Select, Operator-pending
 map <F4> <Esc>:qa<CR> 
-						   " Insert, Command-line, Lang-Arg
+				   " Insert, Command-line, Lang-Arg
 lnoremap <F4> <Esc>:qa<CR>
 
 
 
-					      " Configuration: COMMAND
+			      " Configuration: COMMAND
 command! Cargar :w | :so %
-command! Q :qa
+command! Q :qa!
 
 "###########################################################################################
 
-au  VimEnter * :NvimTreeOpen 
+au VimEnter * :NvimTreeOpen 
+au VimEnter * :b1
 
+" ownes notes
+"nnoremap <leader>p :echo añlsfjk <CR>
 
+	       		      " Normal, Visual, Select, Operator-pending
+map <F4> <Esc>:qa<CR> 
+			      " Insert, Command-line, Lang-Arg
+lnoremap <F4> <Esc>:qa<CR>
 
+			      " Configuration: COMMAND
+command! Cargar :w | :so %
+command! Q :qa!
 
+"###########################################################################################
 
+au VimEnter * :NvimTreeOpen 
+au VimEnter * :b1
 
-
-
-
-
-
-
+" ownes notes
+" 	- Shift + Enter: makes a Enter with ideindentation
+" 	- Cntrl + space: makes I don't know
+" 	- Shift + q: makes, I don't gotcha it, F
+" 	- Shift: It's my leader uwu
