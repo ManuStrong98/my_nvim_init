@@ -45,6 +45,8 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-s> <Esc>:w<CR>
 inoremap <F4> <Esc>:qa<CR>
+inoremap <C-j>; <End>;<Esc>o;
+
 				   " TERMINAL
 "terminal emulator
 tmap <Esc> <C-\><C-n>
@@ -59,6 +61,12 @@ nnoremap <S-h> :vertical resize -4<CR>
 nnoremap <S-k> :resize +5<CR>
 nnoremap <S-j> :resize -5<CR>
 "nnoremap <leader>j :echo añlsfjk<CR>
+"
+"send to a window
+nmap <Right> <Plug>SendRightV
+nmap <Left> <Plug>SendLeftV
+nmap <Up> <Plug>SendUpV
+nmap <Down> <Plug>SendDownV
 
 				   " Normal, Visual, Select, Operator-pending
 map <F4> <Esc>:qa<CR> 
@@ -75,6 +83,7 @@ command! Q :qa!
 
 au VimEnter * :NvimTreeOpen 
 au VimEnter * :b1
+autocmd Filetype java source ~/.config/nvim/sets/JavaN.vim 
 
 " ownes notes
 "nnoremap <leader>p :echo añlsfjk <CR>
@@ -98,3 +107,15 @@ au VimEnter * :b1
 " 	- Cntrl + space: makes I don't know
 " 	- Shift + q: makes, I don't gotcha it, F
 " 	- Shift: It's my leader uwu
+
+"###########################################################################################
+
+
+"###########################################################################################
+
+"identline
+let g:indentLine_bgcolor_gui = '#FFFFFF'
+
+let g:indentLine_char = '|'
+"colorea alrededor de la guia
+"let g:indentLine_bgcolor_term = 0
