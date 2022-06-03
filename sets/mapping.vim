@@ -4,7 +4,7 @@ let mapleader = "\ "
 				   " INSERT
 "to Shift-Tab
 inoremap <S-TAB> <C-d>
-inoremap <C-space> <C-p>
+inoremap <C-space> <C-f>
 "autocomplete
 inoremap <C-a> <Home>
 "goes to the beginning of the line

@@ -23,7 +23,7 @@ set  nowritebackup
  
 "  Give more space for displaying messages.
 set  cmdheight=2
-set mouse=a "Para activar el mouse
+"set mouse=a "Para activar el mouse
 "set clipboard=unnamed " Para poder utilizar el copy/paste fuera de la terminal, solo selecciona en modo visual teclas la letra y para copiar, para pegar desde fuera de la terminal teclas la letra p en modo visual y listo
 "set clipboard=unnamedplus
 

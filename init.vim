@@ -12,4 +12,7 @@ so ~/.config/nvim/sets/mapping.vim 		"mapping
 so ~/.config/nvim/sets/requerimientos.vim	"Requerimientos para los plugins
 
 autocmd Filetype java source ~/.config/nvim/language_setup/JavaN.vim
+autocmd Filetype javascript source ~/.config/nvim/language_setup/JsN.vim 
+autocmd Filetype perl source ~/.config/nvim/language_setup/Perl.vim 
+
 let g:nvim_tree_icon_padding = ' ' 

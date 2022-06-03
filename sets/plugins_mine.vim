@@ -33,6 +33,18 @@ call plug#begin('~/.config/nvim/plugged')
 
    " Nvim TREE
    Plug 'kyazdani42/nvim-tree.lua'
+   Plug 'turbio/bracey.vim'
+
+   " para maquetear html
+   Plug 'mattn/emmet-vim'
+
+   " live server
+   Plug 'turbio/bracey.vim'
+   "multicursos
+   Plug 'terryma/vim-multiple-cursors'
+
+   "surround
+   Plug 'tpope/vim-surround'
 call plug#end()
 
 
