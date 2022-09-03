@@ -2,6 +2,7 @@
 let mapleader = "\ "
 				" Configuration: MAP
 				   " INSERT
+inoremap <C-space> <C-n>
 "to Shift-Tab
 inoremap <S-TAB> <C-d>
 inoremap <C-space> <C-f>
@@ -42,6 +43,7 @@ nnoremap <S-j> :resize -5<CR>
 "<F16> it's as Shift-F4
 nnoremap <F16> :qa!<CR>
 nnoremap <F12> :tabnew $MYVIMRC<CR>
+nnoremap <C-s> :w<CR>
 "nnoremap <C-W> :tabclose<CR>
 
 "nnoremap <leader>j :echo añlsfjk<CR>
@@ -54,6 +56,7 @@ nmap <Down> <Plug>SendDownV
 
 				   " Normal, Visual, Select, Operator-pending
 map <F4> <Esc>:qa<CR> 
+map <Esc> <Esc>:noh<CR>
 				   " Insert, Command-line, Lang-Arg
 lnoremap <F4> <Esc>:qa<CR>
 

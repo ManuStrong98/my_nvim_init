@@ -29,10 +29,10 @@ call plug#begin('~/.config/nvim/plugged')
    Plug 'kyazdani42/nvim-web-devicons'
    Plug 'nvim-lua/popup.nvim'
    Plug 'nvim-lua/plenary.nvim'
-   Plug 'nvim-telescope/telescope.nvim'
+"   Plug 'nvim-telescope/telescope.nvim'
 
    " Nvim TREE
-   Plug 'kyazdani42/nvim-tree.lua'
+"   Plug 'kyazdani42/nvim-tree.lua'
    Plug 'turbio/bracey.vim'
 
    " para maquetear html
@@ -45,6 +45,18 @@ call plug#begin('~/.config/nvim/plugged')
 
    "surround
    Plug 'tpope/vim-surround'
+
+   " LSP
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'williamboman/nvim-lsp-installer'
+    Plug 'mfussenegger/nvim-jdtls'
+
+    Plug 'nvim-treesitter/nvim-treesitter'
+    "comment
+    Plug 'tpope/vim-commentary'
+
+    " color
+    Plug 'lilydjwg/colorizer'
 call plug#end()
 
 

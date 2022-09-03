@@ -32,4 +32,11 @@ echo empty(system('cat hola.java'))
 "para mis clases XD
 abbreviate _myname @Author:  Manuel Copa Q. <CR>@Carrera: Ing Informática
 
-abbreviate _sout System.out.print("");
+abbreviate _sout System.out.print("");<Esc>F"
+abbreviate _main public static void main(String[] args){<CR>
+
+function SetPublic()
+   let nameArchivo = expand('%:r')
+   execute("normal ipublic class " . nameArchivo . "\<Esc>o{\<CR>")
+endfunction
+

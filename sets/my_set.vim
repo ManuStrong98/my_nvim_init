@@ -1,6 +1,6 @@
 				" Configuration: SET
 "set tab 3 spaces
-set sw=3
+set sw=4
 
 "set cursorline cursorcolumn
 "number and relative number simultaneously
@@ -43,10 +43,13 @@ command! Q :qa!
 
 "###########################################################################################
 
-au VimEnter * :NvimTreeOpen 
+"au VimEnter * :NvimTreeOpen 
 au VimEnter * :b1
 au VimEnter * :RltvNmbr
-
+au BufNew * :RltvNmbr
+"au BufNewFile * :RltvNmbr
+au BufWinEnter * :RltvNmbr
+au BufWinEnter * :set nu
 " ownes notes
 " 	- Shift + Enter: makes a Enter with ideindentation
 " 	- Cntrl + space: makes I don't know
