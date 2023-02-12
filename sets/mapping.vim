@@ -1,3 +1,7 @@
+function GetName()
+    "ex
+    return(expand("%:r"))
+endfunction
 " configuration leader
 let mapleader = "\ "
 				" Configuration: MAP
@@ -13,9 +17,9 @@ inoremap <C-e> <End>
 "goes to the end of the line
 inoremap <M-d> <Del>
 "deletes one characater to the righ
-inoremap <C-p> <Up>
+" inoremap <C-p> <Up>
 "goes to the up of the line 
-inoremap <C-n> <Down>
+" inoremap <C-n> <Down>
 inoremap <M-b> <C-Left>
 inoremap <M-f> <C-Right>
 inoremap <C-f> <Right>
@@ -44,8 +48,11 @@ nnoremap <S-j> :resize -5<CR>
 nnoremap <F16> :qa!<CR>
 nnoremap <F12> :tabnew $MYVIMRC<CR>
 nnoremap <C-s> :w<CR>
+" move line
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
 "nnoremap <C-W> :tabclose<CR>
-
+"nnoremap <F17> :FloatermNew --position=bottomright<CR>
 "nnoremap <leader>j :echo añlsfjk<CR>
 "
 "send to a window
@@ -66,5 +73,8 @@ lnoremap <F4> <Esc>:qa<CR>
 map <F4> <Esc>:qa<CR> 
 			      " Insert, Command-line, Lang-Arg
 lnoremap <F4> <Esc>:qa<CR>
-
-
+				" visual
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+    " https://vim.fandom.com/wiki/Moving_lines_up_or_down
+    

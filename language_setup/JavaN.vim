@@ -33,10 +33,15 @@ echo empty(system('cat hola.java'))
 abbreviate _myname @Author:  Manuel Copa Q. <CR>@Carrera: Ing Informática
 
 abbreviate _sout System.out.print("");<Esc>F"
-abbreviate _main public static void main(String[] args){<CR>
+abbreviate _main public static void main(String[] args)<Esc>o{<CR>
 
 function SetPublic()
    let nameArchivo = expand('%:r')
    execute("normal ipublic class " . nameArchivo . "\<Esc>o{\<CR>")
 endfunction
+
+
+noremap <F5> :!javac %<CR>
+
+nnoremap <F17> :sv <Esc><C-w>j :resize -5 \| :terminal java  %:t:r<CR> 
 

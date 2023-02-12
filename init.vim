@@ -22,6 +22,7 @@ autocmd Filetype vim source ~/.config/nvim/language_setup/Vim.vim
 autocmd Filetype typescript source ~/.config/nvim/language_setup/TsN.vim
 autocmd Filetype php source ~/.config/nvim/language_setup/PhpN.vim
 
+so ~/.config/nvim/autoload/java_getset.vim
 "let g:nvim_tree_icon_padding = ' ' 
 
 function! Ejem()
@@ -35,11 +36,37 @@ endfunction
 call Hola()
 " :v:lang output: content of actual script
 
-source ~/.config/nvim/lua/luaConfiguration/init.lua
+" source ~/.config/nvim/lua/luaConfiguration/init.lua
 
 set cursorcolumn
 set cursorline
 highlight cursorcolumn ctermbg=0   
 hi CursorLine ctermbg=0 
-hi CursorLine term=bold cterm=bold guibg=Grey40
+" hi CursorLine term=bold cterm=bold guibg=Grey40
 
+
+ colorscheme nord
+
+ " let NERDTreeShowHidden=1
+
+ " lua require('config')
+
+" Cntrl + . ¿que es?
+" syntax on
+highlight Visual cterm=reverse
+inoremap <silent><expr> <C-space> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
+
+
+set conceallevel=0
+
+		let g:lightline = {
+			\ 'active': {
+			\   'left': [ [ 'mode', 'paste' ],
+			\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+			\ },
+			\ 'component_function': {
+			\   'gitbranch': 'FugitiveHead'
+			\ },
+			\ }
+
+" custom highlighting https://superuser.com/questions/110054/custom-vim-highlighting

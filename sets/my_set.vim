@@ -7,7 +7,6 @@ set sw=4
 set number 
 
 "colorscheme delek
-
 "set encoding=utf-8 
  
 "  TextEdit might fail if hidden is not set.
@@ -38,13 +37,15 @@ command! Q :qa!
 "nnoremap <leader>p :echo añlsfjk <CR>
 
 			      " Configuration: COMMAND
-command! Cargar :w | :so %
+command! ToLoad :w | :so %
 command! Q :qa!
+command! ResetAllChanges :u0
+    " https://stackoverflow.com/questions/8565357/undo-all-changes-since-opening-buffer-in-vim
 
 "###########################################################################################
 
-"au VimEnter * :NvimTreeOpen 
-au VimEnter * :b1
+" au VimEnter * :NvimTreeOpen 
+" au VimEnter * :b1
 au VimEnter * :RltvNmbr
 au BufNew * :RltvNmbr
 "au BufNewFile * :RltvNmbr
